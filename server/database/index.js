@@ -13,7 +13,11 @@ connection.connect((err) => {
 });
 
 const getProduct = (id, callback) => {
-  connection.query(`SELECT (productId, productTitle, productDescription, price, productDetails, productMaterial, reviewCount, rating) FROM products WHERE productId='${id}';`, (err, data) => {
+  var query = ` SELECT *
+                FROM products
+                WHERE productId=${id};`;
+  connection.query(query, (err, data) => {
+    console.log('data- ', data);
     if(err) console.log('error in getProduct- ', err);
     callback(null, data);
   });
