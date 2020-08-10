@@ -13,7 +13,7 @@ CREATE TABLE products (
   productDetails VARCHAR(60),
   productMaterial VARCHAR(60),
   reviewCount int,
-  rating DECIMAL
+  rating DECIMAL(3, 2)
 );
 
 

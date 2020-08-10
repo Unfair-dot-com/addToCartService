@@ -22,7 +22,7 @@ connection.query(schemaQuery, (err) => {
 
 //populate the db
 for(var i = 0; i < 100; i++) {
-  let productId = i;
+  let productId = i + 1;
   let productTitle = faker.commerce.productName();
   let productDescription = faker.lorem.paragraph(3);
   let price = faker.finance.amount(10, 1000, 2); //console.log('price- ', price);
