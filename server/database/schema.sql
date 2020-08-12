@@ -9,7 +9,7 @@ CREATE TABLE products (
   productId int NOT NULL,
   productTitle VARCHAR(50),
   productDescription VARCHAR(800),
-  price DECIMAL,
+  price DECIMAL(6, 2),
   productDetails VARCHAR(60),
   productMaterial VARCHAR(60),
   reviewCount int,
