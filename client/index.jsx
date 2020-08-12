@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let productId = this.state.productId.split('/')[2]; console.log('productId- ', productId);
+    let productId = this.state.productId.split('/')[2];
     axios.get(`/product/${productId}`)
     .then((response) => {
       console.log('axios response- ', response.data);
@@ -30,17 +30,9 @@ class App extends React.Component {
     return (
       <div>
         <ProductDetailsList details={this.state.productDetails} />
-
       </div>
     )
   }
 }
 
-
-// const App = () => (
-//   <div>
-//     <ProductDetailsList details={this.state.details} />
-//   </div>
-// )
-
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("addToCart"));

@@ -3,7 +3,6 @@ import StarRatings from 'react-star-ratings';
 import Dropdown from 'react-dropdown';
 // import 'react-dropdown/styles.css';
 
-
 const ProductDetailsList = ({details}) => (
   <div class="productDetails">
     {details.map((product) => (
@@ -35,18 +34,13 @@ const ProductDetailsList = ({details}) => (
           <Dropdown options={[1, 2, 3, 4, 5, 6]} value={1} placeholder="1" />
           <button></button>
         </div>
-
-
-
         <h2>Product Overview</h2>
         <div>
           Material<br />
           {product.productMaterial}
         </div>
-
         <h3>Description</h3>
         {product.productDescription}
-
         <h4>Product Details</h4>
         <span>{product.productDetails}</span>
         <div>
@@ -54,11 +48,6 @@ const ProductDetailsList = ({details}) => (
           {product.productMaterial}
         </div>
       </div>
-
-
-
-
-
     ))}
     <h1></h1>
   </div>
