@@ -3,12 +3,15 @@ const bodyParser = require('body-parser');
 const db = require('./database');
 const app = express();
 const port = 9000;
+const path = require('path');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/:productId', (req, res) => {
+app.use('/products/:productId', express.static(path.join('./public')));
+
+app.get('/product/:productId', (req, res) => {
   let id = req.params.productId; console.log('req.params- ', req.params.productId);
   db.getProduct(id, (err, data) => {
     if(err) {
