@@ -24,7 +24,7 @@ connection.query(schemaQuery, (err) => {
 });
 
 //populate the db
-for(var i = 0; i < 100; i++) {
+for(var i = 0; i < 99; i++) {
   let productId = i + 1;
   let productTitle = faker.commerce.productName();
   let productDescription = faker.lorem.paragraph(3);
