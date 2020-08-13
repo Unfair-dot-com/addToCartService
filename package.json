@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config jest.config.js",
+    "test:watch": "npm run test -- --watch",
     "start": "nodemon server/index.js",
     "seed": "node ./server/database/seed.js",
     "build": "webpack --config webpack.config.js --watch"
@@ -24,6 +25,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "axios": "^0.19.2",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "cli": "^1.0.1",
     "eslint": "^7.2.0",
@@ -32,9 +34,12 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.0",
+    "jest": "^26.3.0",
+    "puppeteer": "^5.2.1",
     "react-dom": "^16.13.1",
     "react-dropdown": "^1.7.0",
     "react-star-ratings": "^2.3.0",
+    "supertest": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },

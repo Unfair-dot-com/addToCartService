@@ -8,7 +8,9 @@ const connection = mysql.createConnection({
 });
 
 connection.connect((err) => {
-  if(err) console.log('db connection error- ', err);
+  if(err) {
+    console.log('db connection error- ', err);
+  }
   console.log('db connected!');
 });
 
@@ -17,8 +19,9 @@ const getProduct = (id, callback) => {
                 FROM products
                 WHERE productId=${id};`;
   connection.query(query, (err, data) => {
-    console.log('data- ', data);
-    if(err) console.log('error in getProduct- ', err);
+    if(err) {
+      console.log('error in getProduct- ', err);
+    }
     callback(null, data);
   });
 }
