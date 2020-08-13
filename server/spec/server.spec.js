@@ -2,7 +2,6 @@ const mysql = require('mysql');
 const supertest = require('supertest');
 const app = require('../index.js');
 const request = supertest(app);
-// const getProduct = require('../database/index.js');
 
 // describe('My Test Suite', () => {
 //   it('My Test Case', () => {
@@ -46,33 +45,3 @@ describe('GET request', () => {
     done();
   });
 })
-// jest.mock('', () =>  {
-//   return {
-//     url: 'http://127.0.0.1:9000/products/0/',
-//     request: jest.fn().mockResolvedValue({
-//       data: [
-//         {
-//           productId: 0,
-//           productTitle: "Celestial Harmony Sun & Moon Wall Décor",
-//           productDescription: "Add a touch of artistic charm to your home with the Design Toscano Celestial Harmony Sun and Moon Wall Decor. Designed by well-known artist Myers Hartley, this astounding sculpture represents the moon and the sun living together in harmony and hanging a balance. The Celestial Harmony Sun and Moon Wall Decor comes with durability that lasts for many decades. It is highly resistant to harsh UV rays and every form of fading. A gorgeous combination of ivory and gold completes this beautiful masterpiece. You can keep this statue looking brand new always, by keeping it indoors in freezing winters.",
-//           price: 68.98,
-//           productDetails: "Product Care: Store indoors during the winter season",
-//           productMaterial: "Material: Resin/Plastic Material Details: Designer Resin",
-//           reviewCount: 696,
-//           rating: 4.8
-//         }
-//       ]
-//     })
-//   }
-// })
-
-// describe('test get', () => {
-//   afterEach(() => {
-//     jest.resetAllMocks();
-//   })
-
-//   it('fetched product by id', async () => {
-//     const temp = await getProduct(0);
-//     expect(request).toBeDefined();
-//   })
-// })
