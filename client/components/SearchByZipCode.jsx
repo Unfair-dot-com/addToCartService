@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import weekday from 'weekday';
+import ZIPCODE_API_KEY from '../zipcodeapikey.js';
 
 class SearchByZipCode extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class SearchByZipCode extends React.Component {
 
   getZipCode() {
     let zipcode = this.state.zip;
-    axios.get(`https://www.zipcodeapi.com/rest/nGQpC0PM3JixySwJXkzyjftdDZlPLyiltgL2oK7CDfBsUItgHmdJglJiBL6enZ8E/info.json/${zipcode}/degrees`)
+    axios.get(`https://www.zipcodeapi.com/rest/${ZIPCODE_API_KEY}/info.json/${zipcode}/degrees`)
     .then((response) => {
       console.log('zipcode- ', response.data);
       this.setState({ zip: response.data.zip_code, city: response.data.city })
