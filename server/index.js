@@ -9,6 +9,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
+
 app.use('/products/:productId', express.static(path.join('./public')));
 
 app.get('/product/:productId', (req, res) => {
