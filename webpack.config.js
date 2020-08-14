@@ -18,6 +18,12 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
+      },
+      {
+        test: /\.(jpg|jpeg|png|gif|mp3|svg|ttf|woff2|woff|eot)$/,
+        use: {
+          loader: "file-loader"
+        }
       }
     ]
   }
