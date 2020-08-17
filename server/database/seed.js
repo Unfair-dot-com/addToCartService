@@ -33,11 +33,13 @@ for(var i = 0; i < 99; i++) {
   let productMaterial = faker.commerce.productMaterial();
   let reviewCount = faker.random.number(1000);
   let rating = faker.finance.amount(0, 5, 2);
+  let randomMonth = faker.date.month();
+  let randomDate = faker.random.number({min:1, max:30});
 
   var query = `INSERT INTO products
-              (productId, productTitle, productDescription, price, productDetails, productMaterial, reviewCount, rating)
+              (productId, productTitle, productDescription, price, productDetails, productMaterial, reviewCount, rating, randomMonth, randomDate)
               VALUES
-              ('${productId}', '${productTitle}', '${productDescription}', '${price}', '${productDetails}', '${productMaterial}', '${reviewCount}', '${rating}')`;
+              ('${productId}', '${productTitle}', '${productDescription}', '${price}', '${productDetails}', '${productMaterial}', '${reviewCount}', '${rating}', '${randomMonth}', '${randomDate}')`;
 
   connection.query(query);
 }
